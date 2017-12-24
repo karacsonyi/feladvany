@@ -17,7 +17,7 @@ class Third extends Component {
 
   checkSolution() {
     const { word } = this.state;
-    if (word.toLowerCase() === 'egyszerű') {
+    if (word.toLowerCase().trim() === 'egyszerű') {
       this.props.history.push(`/${fourth}`);
     } else {
       this.setState({ ...this.state, isSnackbarOpened: true });
